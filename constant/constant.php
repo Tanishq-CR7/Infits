@@ -1,3 +1,7 @@
 <?php
-$DEFAULT_PATH = 'http://localhost/Analysed/Infits_web/';
+
+
+$DEFAULT_PATH = 'http://localhost/infits-new/Infits_web/';
+
+
 ?>

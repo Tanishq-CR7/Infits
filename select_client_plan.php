@@ -240,7 +240,8 @@ include('navbar.php');
 
     }
     
-    
+
+
     </style>
     <script>
     $(document).ready(function() {
@@ -442,6 +443,10 @@ else{
                         ?>
 
                     <div>
+
+
+                    </div>
+
                 </div>
             </div>
             </div>
@@ -449,8 +454,10 @@ else{
             
            
 
-        
-            <?php require('constant/scripts.php'); ?>
+</body>
+<?php require('constant/scripts.php'); ?>
+
+
 <script>
 function fill(Value) {
     $('#search').val(Value);
@@ -475,8 +482,10 @@ $(document).ready(function() {
         }
     });
 });
-</script>       
-</body>
+
+
+</script>
+
 
 
 </html>
