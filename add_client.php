@@ -61,514 +61,521 @@ if (isset($_SESSION['dietitianuserID'])) {
 
 </head>
 <style>
-body {
-    overflow-x: hidden;
-}
+    body {
+        overflow-x: hidden;
+    }
 
-::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #BBBBBB;
-    opacity: 1;
-    /* Firefox */
-    padding: 5px;
-}
+    ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #BBBBBB;
+        opacity: 1;
+        /* Firefox */
+        padding: 5px;
+    }
 
-#main {
-    font-family: 'NATS';
-    font-weight: 400;
-    font-style: normal;
-    /* padding-left: 4rem; */
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    #main {
+        font-family: 'NATS';
+        font-weight: 400;
+        font-style: normal;
+        /* padding-left: 4rem; */
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
 
 
-}
-.row{
-     --bs-gutter-x: 0 !important;
-}
+    }
 
-.text {
-    position: absolute;
-    bottom: -150px;
-    display: flex;
+    .row {
+        --bs-gutter-x: 0 !important;
+    }
 
-    font-weight: 500;
-}
+    .text {
+        position: absolute;
+        bottom: -150px;
+        display: flex;
 
-.searchbar {
-    display: flex;
-    align-items: center;
-    padding-left: 1rem;
-    width: 349px;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
+        font-weight: 500;
+    }
 
-.col {
-    padding: 0;
-}
+    .searchbar {
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        width: 349px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+    }
 
-.title-bar {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 60px;
-}
+    .col {
+        padding: 0;
+    }
 
-.heading {
-    font-size: 48px;
-}
+    .title-bar {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 60px;
+    }
 
-.tabs-title {
-    margin: 20px 0;
-}
+    .heading {
+        font-size: 48px;
+    }
 
-.client-card-container {
-    padding: 40px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    gap: 20px;
-}
+    .tabs-title {
+        margin: 20px 0;
+    }
 
-.client-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* gap: 14rem; */
-}
+    .client-card-container {
+        padding: 40px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-.bartab {
-    padding-bottom: 0.5rem;
-    /* color:black; */
-}
+        gap: 20px;
+    }
 
-.bartab:hover {
-    border-bottom: 3.59764px solid #9E5EF4;
+    .client-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-}
+    .bartab {
+        padding-bottom: 0.5rem;
+    }
 
-.bartab:active {
+    /* .bartab:hover {
+        border-bottom: 3.59764px solid #9E5EF4;
+
+    } */
+
+    /* .bartab:active {
     border-bottom: 3.59764px solid #9E5EF4;
 }
 
 .bartab:focus {
     border-bottom: 3.59764px solid #9E5EF4 !important;
-}
+} */
 
-.ccard-left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-
-img.profile {
-    width: 56px;
-    height: 56px;
-    border-radius: 100px;
-}
-
-span.client-name {
-    font-family: 'NATS';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 27px;
-    line-height: 88%;
-    color: #000000;
-    width: 161px;
-    text-align: center;
-}
-
-button.btn {
-    font-family: 'NATS';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 42px;
-    color: #9E5EF4;
-
-}
-
-.ccard-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-span.date {
-    font-family: 'NATS';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 42px;
-    color: #CACACA;
-}
-
-span.time {
-    font-family: 'NATS';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 42px;
-    color: #CACACA;
-}
-
-.verified-client {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.verified-client span {
-    font-family: 'NATS';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 27px;
-    line-height: 57px;
-    color: #96C362;
-}
-
-.pending-client {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.pending-client span {
-    font-family: 'NATS';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 27px;
-    line-height: 57px;
-    color: #FF0000;
-}
-
-@media (min-width:992px) {
-    .gap-lg-6 {
-        gap: 10rem !important;
+    .active {
+        border-bottom: 3.59764px solid #9E5EF4;
     }
-}
 
-.code-box {
-    background: #FFFFFF;
-    box-shadow: 0px 2.48366px 6.20915px rgba(0, 0, 0, 0.25);
-    border-radius: 18.6275px;
-    width: 347px;
-    height: 263px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px;
-    padding-top: 25px;
-}
-
-.code-box h4 {
-    font-family: 'NATS';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 88%;
-    /* identical to box height, or 22px */
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #000000;
-}
-
-.code-box .vcode {
-    width: 238px;
-    height: 63px;
-    background: #4B9AFB;
-    border: 1.24183px solid #4B9AFB;
-    border-radius: 15px;
-    justify-content: center;
-    font-family: 'NATS';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 88%;
-    /* or 22px */
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-}
-
-
-
-.code-box p {
-    width: 238px;
-    height: 45px;
-    background: #FFFFFF;
-    border: 1px solid #9E5EF4;
-    border-radius: 10px;
-    font-family: 'NATS';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 38px;
-    display: flex;
-    align-items: center;
-    color: #9E5EF4;
-    display: flex;
-    justify-content: center;
-    animation: c;
-}
-
-.dietitian-code {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    gap: 50px;
-    position: relative;
-}
-
-.text-box {
-    max-width: 80%;
-}
-
-.text {
-    font-family: 'NATS';
-    font-style: normal;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    color: #000000;
-}
-
-.text-box .text h3 {
-    font-size: 24.8366px;
-    line-height: 144%;
-    color: #000000;
-}
-
-.tab,
-.share-btn {
-    cursor: pointer;
-}
-
-.tab-content {
-    display: none;
-}
-
-.share-pop {
-    width: 404.99px;
-    height: 169.57px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 30.7014px rgba(0, 0, 0, 0.25);
-    border-radius: 23.026px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.profilepopup {
-    width: 804.99px;
-    padding: 25px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 30.7014px rgba(0, 0, 0, 0.25);
-    border-radius: 23.026px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.share-pop h4.title {
-    font-family: 'NATS';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 27.9689px;
-    color: #000000;
-}
-
-.popup1 {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    transition: opacity 500ms;
-
-
-}
-
-.popup2 {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    transition: opacity 500ms;
-
-
-}
-
-.inputrow {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-}
-
-.inputbar1 {
-    width: 294.98px;
-    height: 45.8px;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    border: none;
-}
-
-.close {
-    position: absolute;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-    background: none;
-    border: none;
-}
-
-.close:hover {
-    color: #06D85F;
-}
-
-@media screen and (max-width: 500px) {
-   
-    .code-box{
-        width:300px;
+    .ccard-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
     }
-}
-@media screen and (max-width: 1000px){
-    .img111{
-        display:none;
+
+    img.profile {
+        width: 56px;
+        height: 56px;
+        border-radius: 100px;
     }
-    .img112{
-        display:none;
+
+    span.client-name {
+        font-family: 'NATS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 88%;
+        color: #000000;
+        width: 161px;
+        text-align: center;
+    }
+
+    button.btn {
+        font-family: 'NATS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 42px;
+        color: #9E5EF4;
+
+    }
+
+    .ccard-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    span.date {
+        font-family: 'NATS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 42px;
+        color: #CACACA;
+    }
+
+    span.time {
+        font-family: 'NATS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 42px;
+        color: #CACACA;
+    }
+
+    .verified-client {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .verified-client span {
+        font-family: 'NATS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 57px;
+        color: #96C362;
+    }
+
+    .pending-client {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .pending-client span {
+        font-family: 'NATS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 57px;
+        color: #FF0000;
+    }
+
+    @media (min-width:992px) {
+        .gap-lg-6 {
+            gap: 10rem !important;
+        }
+    }
+
+    .code-box {
+        background: #FFFFFF;
+        box-shadow: 0px 2.48366px 6.20915px rgba(0, 0, 0, 0.25);
+        border-radius: 18.6275px;
+        width: 347px;
+        height: 263px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding-top: 25px;
+    }
+
+    .code-box h4 {
+        font-family: 'NATS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 88%;
+        /* identical to box height, or 22px */
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #000000;
+    }
+
+    .code-box .vcode {
+        width: 238px;
+        height: 63px;
+        background: #4B9AFB;
+        border: 1.24183px solid #4B9AFB;
+        border-radius: 15px;
+        justify-content: center;
+        font-family: 'NATS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 88%;
+        /* or 22px */
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;
     }
 
 
-}
-@media screen and (max-width: 720px) {
-    span .client-name {
-        font-size: 20px !important;
-        width: 130px !important;
+
+    .code-box p {
+        width: 238px;
+        height: 45px;
+        background: #FFFFFF;
+        border: 1px solid #9E5EF4;
+        border-radius: 10px;
+        font-family: 'NATS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 38px;
+        display: flex;
+        align-items: center;
+        color: #9E5EF4;
+        display: flex;
+        justify-content: center;
+        animation: c;
     }
-    #flexchange {
+
+    .dietitian-code {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        gap: 50px;
+        position: relative;
+    }
+
+    .text-box {
+        max-width: 80%;
+    }
+
+    .text {
+        font-family: 'NATS';
+        font-style: normal;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        color: #000000;
+    }
+
+    .text-box .text h3 {
+        font-size: 24.8366px;
+        line-height: 144%;
+        color: #000000;
+    }
+
+    .tab,
+    .share-btn {
+        cursor: pointer;
+    }
+
+    .tab-content {
+        display: none;
+    }
+
+    .share-pop {
+        width: 404.99px;
+        height: 169.57px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 30.7014px rgba(0, 0, 0, 0.25);
+        border-radius: 23.026px;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-
-    .img111 {
-        display: none;
-    }
-
-    .img112 {
-        display: none;
-    }
-
-    .searchbar {
-        width: auto;
-        height: 35px;
-
-    }
-
-    .tabsss {
-        margin-left: 2rem;
-    }
-
-    
 
     .profilepopup {
-        width: auto;
+        width: 804.99px;
+        padding: 25px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 30.7014px rgba(0, 0, 0, 0.25);
+        border-radius: 23.026px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .share-pop h4.title {
+        font-family: 'NATS';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27.9689px;
+        color: #000000;
+    }
+
+    .popup1 {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        transition: opacity 500ms;
+
+
+    }
+
+    .popup2 {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.6);
+        transition: opacity 500ms;
+
+
+    }
+
+    .inputrow {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
     }
 
     .inputbar1 {
-        width: auto;
+        width: 294.98px;
+        height: 45.8px;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        border: none;
     }
 
-    .tab-content {
-        margin-left: 1.5rem;
+    .close {
+        position: absolute;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+        background: none;
+        border: none;
+    }
+
+    .close:hover {
+        color: #06D85F;
+    }
+
+    @media screen and (max-width: 500px) {
+
+        .code-box {
+            width: 300px;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        .img111 {
+            display: none;
+        }
+
+        .img112 {
+            display: none;
+        }
+
 
     }
 
-    .tab-content {
-        margin-left: 1rem;
+    @media screen and (max-width: 720px) {
+        span .client-name {
+            font-size: 20px !important;
+            width: 130px !important;
+        }
+
+        #flexchange {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .img111 {
+            display: none;
+        }
+
+        .img112 {
+            display: none;
+        }
+
+        .searchbar {
+            width: auto;
+            height: 35px;
+
+        }
+
+        .tabsss {
+            margin-left: 2rem;
+        }
+
+
+
+        .profilepopup {
+            width: auto;
+        }
+
+        .inputbar1 {
+            width: auto;
+        }
+
+        .tab-content {
+            margin-left: 1.5rem;
+
+        }
+
+        .tab-content {
+            margin-left: 1rem;
+
+        }
+
+        .gap-lg-6 {
+            gap: 1rem !important;
+        }
+
+        .gap-lg-5 {
+            gap: 1rem !important;
+        }
 
     }
 
-    .gap-lg-6 {
-        gap: 1rem !important;
+    @media screen and (max-width:932px) {
+        .tab-content {
+            margin-left: 1rem;
+
+        }
+
+        .gap-lg-6 {
+            gap: 1rem !important;
+        }
+
+        .gap-lg-5 {
+            gap: 1rem !important;
+        }
     }
 
-    .gap-lg-5 {
-        gap: 1rem !important;
+    @media screen and (max-width:1100px) {
+        .tab-content {
+            margin-left: 1rem;
+
+        }
+
+        .gap-lg-6 {
+            gap: 0.5rem !important;
+        }
+
+        .gap-lg-5 {
+            gap: 0.5rem !important;
+        }
     }
-
-}
-
-@media screen and (max-width:932px) {
-    .tab-content {
-        margin-left: 1rem;
-
-    }
-
-    .gap-lg-6 {
-        gap: 1rem !important;
-    }
-
-    .gap-lg-5 {
-        gap: 1rem !important;
-    }
-}
-
-@media screen and (max-width:1100px) {
-    .tab-content {
-        margin-left: 1rem;
-
-    }
-
-    .gap-lg-6 {
-        gap: 0.5rem !important;
-    }
-
-    .gap-lg-5 {
-        gap: 0.5rem !important;
-    }
-}
 </style>
 
 <body>
@@ -588,8 +595,8 @@ span.time {
             </div>
         </div>
         <div class="row tabs-title mt-3 mb-3 tabsss" style="margin-top:2rem !important">
-            <div id="verification" class="col-4 tab " tab="vcode">
-                <h3 class="text-center  bartab">Verification Code</h3>
+            <div id="verification" class="col-4 tab" tab="vcode">
+                <h3 class="text-center bartab">Verification Code</h3>
             </div>
             <div id="verified" class="col-4 tab" tab="vclients">
                 <h3 class="text-center  bartab">Verified Clients</h3>
@@ -610,27 +617,27 @@ span.time {
                     if (mysqli_num_rows($result) > 0) {
                         while ($row = mysqli_fetch_assoc($result)) {
                             ?>
-                    <div id="flexchange" class="client-card gap-1 gap-md-3 gap-lg-6 ">
-                        <div class="ccard-left gap-md-2 gap-lg-5">
-                            <img class="profile" src="<?= $DEFAULT_PATH ?>assets/images/client1.svg" alt="">
-                            <span class="client-name">
-                                <?php echo $row['name'] ?>
-                            </span>
-                            <button data-client-username="<?= $row['clientuserID'] ?>"
-                                data-client-dietitian="<?= $row['dietitianuserID'] ?>" type="button"
-                                class="btn btn_verified">Profile</button>
-                        </div>
-                        <div class="ccard-right gap-md-2 gap-lg-5">
-                            <span class="date">
-                                <?php echo $row['last_seen'] ?>
-                            </span>
-                            <div class="verified-client">
-                                <span>Verified!</span>
-                                <img src="<?= $DEFAULT_PATH ?>assets/images/Approval.svg" alt="">
+                            <div id="flexchange" class="client-card gap-1 gap-md-3 gap-lg-6 ">
+                                <div class="ccard-left gap-md-2 gap-lg-5">
+                                    <img class="profile" src="<?= $DEFAULT_PATH ?>assets/images/client1.svg" alt="">
+                                    <span class="client-name">
+                                        <?php echo $row['name'] ?>
+                                    </span>
+                                    <button data-client-username="<?= $row['clientuserID'] ?>"
+                                        data-client-dietitian="<?= $row['dietitianuserID'] ?>" type="button"
+                                        class="btn btn_verified">Profile</button>
+                                </div>
+                                <div class="ccard-right gap-md-2 gap-lg-5">
+                                    <span class="date">
+                                        <?php echo $row['last_seen'] ?>
+                                    </span>
+                                    <div class="verified-client">
+                                        <span>Verified!</span>
+                                        <img src="<?= $DEFAULT_PATH ?>assets/images/Approval.svg" alt="">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <?php
+                            <?php
                         }
                     }
                     ?>
@@ -646,26 +653,26 @@ span.time {
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
                         ?>
-                <div id='flexchange' class='client-card gap-1 gap-md-3 gap-lg-6'>
-                    <div class='ccard-left gap-md-2 gap-lg-5'>
-                        <img class='profile' src='<?= $DEFAULT_PATH ?>assets/images/client1.svg' alt=''>
-                        <span class='client-name'>
-                            <?php echo $row['name'] ?>
-                        </span>
-                        <button data-client-username="<?= $row['clientuserID'] ?>" type='button'
-                            class='btn btn_pending'>Profile</button>
-                    </div>
-                    <div class='ccard-right gap-md-2 gap-lg-5'>
-                        <span class='date'>
-                            <?php echo $row['last_seen'] ?>
-                        </span>
-                        <div class='pending-client'>
-                            <span>pending!</span>
-                            <img src='<?= $DEFAULT_PATH ?>assets/images/pending-client.svg' alt=''>
+                        <div id='flexchange' class='client-card gap-1 gap-md-3 gap-lg-6'>
+                            <div class='ccard-left gap-md-2 gap-lg-5'>
+                                <img class='profile' src='<?= $DEFAULT_PATH ?>assets/images/client1.svg' alt=''>
+                                <span class='client-name'>
+                                    <?php echo $row['name'] ?>
+                                </span>
+                                <button data-client-username="<?= $row['clientuserID'] ?>" type='button'
+                                    class='btn btn_pending'>Profile</button>
+                            </div>
+                            <div class='ccard-right gap-md-2 gap-lg-5'>
+                                <span class='date'>
+                                    <?php echo $row['last_seen'] ?>
+                                </span>
+                                <div class='pending-client'>
+                                    <span>pending!</span>
+                                    <img src='<?= $DEFAULT_PATH ?>assets/images/pending-client.svg' alt=''>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <?php
+                        <?php
                     }
                 }
                 ?>
@@ -739,11 +746,24 @@ span.time {
                     const id = el.getAttribute('tab');
                     document.querySelectorAll('.tab-content').forEach(element => {
                         element.style.display = 'none';
-                        // element.classList.add("active");
                     });
                     document.getElementById(id).style.display = 'flex';
+                    if (id == 'vcode') {
+                        document.getElementById('verification').classList.add('active');
+                        document.getElementById('verified').classList.remove('active');
+                        document.getElementById('pending').classList.remove('active');
+                    } else if (id == 'vclients') {
+                        document.getElementById('verified').classList.add('active');
+                        document.getElementById('verification').classList.remove('active');
+                        document.getElementById('pending').classList.remove('active');
+                    } else {
+                        document.getElementById('pending').classList.add('active');
+                        document.getElementById('verified').classList.remove('active');
+                        document.getElementById('verification').classList.remove('active');
 
+                    }
                 })
+
             });
             tab[0].click();
 
