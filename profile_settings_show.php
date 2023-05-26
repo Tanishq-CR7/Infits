@@ -245,15 +245,17 @@ border-radius: 25.5283px;
                 </span>
 
                 </span>
-
-                <span style="display:flex;flex-direction:column">
-                    Experience <input type="text" class="input_field" placeholder="XXXXX">
-                </span>
-                <span style="display:flex;flex-direction:column">
-                    Refferal Code <input type="text" class="input_field" placeholder="XXXXX">
-                </span>
                 <span style="display:flex;flex-direction:column">
                     Acheivements and Certificates <input type="text" class="input_field" placeholder="XXXXX">
+
+                    Experience <input type="text" class="input_field" placeholder="XXXXX"  value="<?=$data['experience']?>">
+                </span>
+                <span style="display:flex;flex-direction:column">
+                    Refferal Code <input type="text" class="input_field" placeholder="XXXXX" value="<?php //$data['refferal']?>">
+                </span>
+                <span style="display:flex;flex-direction:column">
+                    Acheivements and Certificates <input type="text" class="input_field" placeholder="XXXXX"  value="<?php //$data['acheivements']?>" >
+
                 </span>
 
             </div>
@@ -316,8 +318,8 @@ border-radius: 25.5283px;
             password.type = "password";
             eyeicon.src = "<?=$DEFAULT_PATH?>assets/images/eye.svg";
         }
-    }
     </script>
-    <?php require('constant/scripts.php');?>
+    <?php require('constant/scripts.php'); ?>
 </body>
+
 </html>
