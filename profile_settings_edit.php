@@ -604,7 +604,7 @@ border-radius: 25.5283px;
     }
 
     }
-</style>
+
     }
 </style>
 <body>
