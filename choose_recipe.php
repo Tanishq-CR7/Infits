@@ -596,7 +596,7 @@ require('constant/config.php');
                         <div class="card-num-circle"><?= $steps ?> </div> &nbsp;
                         <div class="step" style="font-size:18px; margin-top: -5px;">Steps</div>
                     </div>
-                    <p class="card-time"> <img src="<?=$DEFAULT_PATH?>assets/images/time.svg" style="margin-right:3px;" alt=""> 20:00</p>
+                    <p class="card-time"> <img src="<?=$DEFAULT_PATH?>assets/images/Clock.svg" style="margin-right:3px;" alt=""> 20:00</p>
                 </div>
                 <div class="d-flex justify-content-between" style="align-items:center; margin-top: 5px;">
                     <p class="card-calorie"> <img src="<?=$DEFAULT_PATH?>assets/images/calorie.svg" alt="">kcal</p>
