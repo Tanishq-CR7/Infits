@@ -272,7 +272,7 @@ include('navbar.php') ?>
       </div>
       <div class="right-content" style="display:flex;align-items:center;gap:1rem; margin-right:40px; margin-top:20px;">
         <button class="btn" text="submit"> <span>Connect to plan</span> </button>
-          <div class="hover-text"><img  src="<?=$DEFAULT_PATH?>assets/images/purple-info.svg">
+          <div class="hover-text"><img  src="<?=$DEFAULT_PATH?>assets/images/error.svg">
             <span class="tooltip-text" id="right">Set default daily fitness for all the clients from here!</span></div> 
           </div>
       </div>
