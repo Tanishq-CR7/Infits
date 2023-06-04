@@ -28,7 +28,7 @@ include "navbar.php";
         display: flex;
         flex-direction: column;
         padding-top: 2rem;
-        padding-left: 2.5rem;
+        padding-left: 5.5rem;
         padding-right: 4rem;
     }
 
@@ -36,7 +36,7 @@ include "navbar.php";
         display: flex;
         justify-content: space-between;
         font-size: 25px;
-
+        padding-right: 2rem;
     }
 
     .input_field {
@@ -96,7 +96,7 @@ include "navbar.php";
 
     .footer {
         display: flex;
-        gap: 14.5%;
+        gap: 4.5%;
     }
 
     .overlay {
@@ -418,15 +418,25 @@ include "navbar.php";
             }
 
         }
+        @media screen and (max-width:720px) {
+            .form-container{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 1rem !important;
+            }
+
+        }
 
     }
 </style>
 
 <body>
     <div class="maincontainer">
-        <h1 style="font-size:40px;fontweight:400;padding-bottom:1rem">Profile Settings</h1>
+        <h1 style="font-size:40px;font-weight:400;padding-bottom:1rem">Profile Settings</h1>
         <form class="maincontainer_wrapper">
-            <div class="leftside" style="display:flex;flex-direction:column;gap:1rem">
+        <div style="display: flex ; gap:5%;" class="form-container"> 
+        <div class="leftside" style="display:flex;flex-direction:column;gap:1rem">
             <?php $sql  = "SELECT * FROM dietitian WHERE dietitianuserID = '{$_SESSION['dietitianuserID']}'";
             global $conn;
             $result = $conn->query($sql);
@@ -501,7 +511,7 @@ include "navbar.php";
                 </a>
 
             </div>
-
+        </div> 
 
             <div class="rightside"
                 style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2rem">
@@ -523,7 +533,7 @@ include "navbar.php";
                     <div style="display:flex;align-items:center;gap:1rem"><img
                             src="<?= $DEFAULT_PATH ?>assets/images/facebook.svg"><span>Facebook</span></div>
                     <div style="display:flex;align-items:center;gap:1rem"><img
-                            src="<?= $DEFAULT_PATH ?>assets/images/LinkedIn-Circled.svg"><span>Linkdin</span></div>
+                            src="<?= $DEFAULT_PATH ?>assets/images/LinkedIn-Circled.svg"><span>Linkedin</span></div>
                     <div style="display:flex;align-items:center;gap:1rem"><img
                             src="<?= $DEFAULT_PATH ?>assets/images/Instagram.svg"><span>Instagram</span></div>
                 </div>
