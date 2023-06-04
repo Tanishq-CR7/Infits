@@ -14,17 +14,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <style>
-
-      @media (max-width:720px) and (min-width:300px) {
-        
-      }
     * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "NATS" !important;
-
 }
+
 .content {
   display: flex;
   align-items: center;
@@ -40,15 +36,13 @@
   margin-bottom: 8px;
 }
 .content .heading-box h1 {
-  font-size: 40px;
+  font-size: 2.3rem;
   font-weight: 400;
-  margin-top:2rem;
-  margin-left: -25px;
 }
 .content .heading-box button#save {
   background-color: #6883fb;
   color: #ffffff;
-  width: 160px;
+  width: 120px;
   font-size: 1.5rem;
   padding: 5px 20px;
   border: none;
@@ -57,29 +51,6 @@
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-}
-.form-container{
-  width:100%;
-}
-.form-question-container{
-  border: none;
-  width:80%;
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 30px;
- }
-.form-values-box{
-  display: flex;  
-  padding: 10px 30px;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-  width:85%;
-  margin-left:-10rem;
-}
-.form-values-box .options{
-  margin-left: 380px;
 }
 .content .flex-container {
   position: relative;
@@ -95,30 +66,15 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.form-title input{
-  height:35px;
-  width:100%;
-  margin-left:10px;
-  font-size: 25px;
-  font-weight: 100;
-  color:#BDBDBD;
-  font-family: 'NATS';
-  font-style: normal;
-  border: none;
-line-height: 111.34%;
-}
-
-.flex-container .form-container .form-title {
-  width: 79%;
-  margin-top: 5px;
+.content .flex-container .form-container .form-title {
+  width: 100%;
   display: flex;
   align-items: center;
-  margin-left:10px;
   padding: 10px 20px;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 13px;
+  border-radius: 15px;
 }
-.content .flex-container .form-container{
+.content .flex-container .form-container .form-title input#formName {
   width: 100%;
   padding: 10px 20px;
   border: none;
@@ -127,344 +83,17 @@ line-height: 111.34%;
 .content .flex-container .form-container .form-title input#formName:focus {
   outline: none;
 }
-.content .flex-container .form-container .form-question-container {
-  width: 100%;
-  margin-top: 40px;
-  display: flex;
-  margin-left: auto;
-  flex-direction: column;
-  gap: 30px;
-  max-height: 500px;
-}
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 30px;
-}
-.content .flex-container .form-container .form-question-container .form-value {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.content .flex-container .form-container .form-question-container .form-values-box .form-value h4.question {
-  font-size: 1.6rem;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-.content .flex-container .form-container .form-question-container .form-values-box .form-value p.answer {
-  margin: 0;
-  color: #D6D6D6;
-  font-size: 1.6rem;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-.content .flex-container .form-container .form-values-box .options {
-  width: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.content .flex-container .form-container .form-question-container .form-values-box .options .option {
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-.content .flex-container .form-container .form-question-container .form-values-box .options .option:first-child svg {
-  fill: #000000;
-}
-.content .flex-container .form-container .form-question-container .form-values-box .options .option:last-child svg {
-  fill: #FF2929;
-}
-#addQuestion{
-  margin-left: 10px;
-}
-.content .flex-container .form-container button#addQuestion {
-  border: 2px solid #6883fb;
-  background-color: #ffffff;
-  color: #6883fb;
-  height: 60px;
-  width: 200px;
-  font-size: 1.6rem;
-  margin-top: 40px;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-}
-.content .flex-container .form-container button#addQuestion:hover {
-  background-color: #6883fb;
-  color: #ffffff;
-}
-.content .flex-container #popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(50%, 20%);
-  background-color: #ffffff;
-  height: 500px;
-  width: 750px;
-  display: none;
-  align-items: center;
-  flex-direction: column;
-  z-index: 1;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-}
-.content .flex-container #popup.show {
-  display: flex;
-}
-.content .flex-container #popup h2 {
-  padding: 20px 0px 10px;
-}
-.content .flex-container #popup input[type=text]#question {
-  border: none;
-  width: 90%;
-  font-size: 1.6rem;
-  padding: 10px 35px;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-}
-.content .flex-container #popup input[type=text]#question:focus {
-  outline: none;
-}
-.content .flex-container #popup .options-container {
-  width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 30px;
-}
-.content .flex-container #popup .options-container .radio-box {
-  display: flex;
-  align-items: center;
-  font-size: 1.6rem;
-}
-.content .flex-container #popup .options-container .radio-box input[name=options] {
-  margin-right: 10px;
-  height: 20px;
-  width: 20px;
-}
-.content .flex-container #popup .custom-input-container {
-  border-top: 1px solid #8E8E8E;
-  width: 90%;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-.content .flex-container #popup .custom-input-container .btn-box {
-  position: relative;
-  width: 100%;
-  padding: 20px 0px;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-.content .flex-container #popup .custom-input-container .btn-box button {
-  border: 2px solid #6883fb;
-  background-color: #ffffff;
-  color: #6883fb;
-  display: flex;
-  align-items: center;
-  padding: 2px 10px;
-  font-size: 1.4rem;
-  border-radius: 10px;
-}
-.content .flex-container #popup .custom-input-container .btn-box button.close {
-  position: absolute;
-  right: 10px;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  height: 30px;
-  width: 30px;
-  margin-left: 20px;
-}
-.content .flex-container #popup .custom-input-container .btn-box button.close img {
-  margin: 0;
-  height: 10px;
-  width: 10px;
-}
-.content .flex-container #popup .custom-input-container .btn-box button img {
-  margin-right: 15px;
-}
-.content .flex-container #popup .custom-input-container .custom-input-row {
-  width: 100%;
-  height: 150px;
-  overflow-y: auto;
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0 10px;
-}
-.content .flex-container #popup .custom-input-container .custom-input-row .rowOnly {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-.content .flex-container #popup .custom-input-container .custom-input-row .rowOnly p {
-  font-size: 1.6rem;
-  color: #6883fb;
-  margin: 0;
-}
-.content .flex-container #popup .custom-input-container .custom-input-row .rowOnly p input {
-  border: 2px solid #6883fb;
-  width: 150px;
-  font-size: 1.4rem;
-  padding: 0px 10px;
-  border-radius: 15px;
-}
-.content .flex-container #popup .custom-input-container .custom-input-row .rowOnly p input:focus {
-  outline: none;
-}
-.content .flex-container #popup .custom-input-container .custom-input-row .rowOnly img {
-  margin-left: 20px;
-  cursor: pointer;
-}
-.content .flex-container #popup .custom-input-container .custom-input-row .rowOnly img[title=Save] {
-  display: none;
-}
-.content .flex-container #popup .custom-input-table-container {
-  border-top: 1px solid #8E8E8E;
-  width: 90%;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-.content .flex-container #popup .custom-input-table-container .btn-box {
-  position: relative;
-  width: 100%;
-  padding: 20px 0px;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-.content .flex-container #popup .custom-input-table-container .btn-box button {
-  border: 2px solid #6883fb;
-  background-color: #ffffff;
-  color: #6883fb;
-  display: flex;
-  align-items: center;
-  padding: 2px 10px;
-  font-size: 1.4rem;
-  border-radius: 10px;
-}
-.content .flex-container #popup .custom-input-table-container .btn-box button.close-custom-input-container {
-  position: absolute;
-  right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  height: 30px;
-  width: 30px;
-  margin-left: 20px;
-}
-.content .flex-container #popup .custom-input-table-container .btn-box button.close-custom-input-container img {
-  margin: 0;
-  height: 10px;
-  width: 10px;
-}
-.content .flex-container #popup .custom-input-table-container .btn-box button img {
-  margin-right: 15px;
-}
-.content .flex-container #popup .custom-input-table-container .custom-input-table {
-  width: 100%;
-  height: 180px;
-  display: none;
-  overflow: auto;
-  padding: 10px;
-}
-.content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-.content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .column-container, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .row-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .column-container .column, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .column-container .rowInput, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .row-container .column, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .row-container .rowInput {
-  display: flex;
-  align-items: center;
-}
-.content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .column-container .column p, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .column-container .rowInput p, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .row-container .column p, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .row-container .rowInput p {
-  font-size: 1.6rem;
-  color: #6883fb;
-  margin: 0;
-}
-.content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .column-container .column p input, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .column-container .rowInput p input, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .row-container .column p input, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .row-container .rowInput p input {
-  border: 2px solid #6883fb;
-  width: 150px;
-  font-size: 1.4rem;
-  padding: 0px 10px;
-  border-radius: 15px;
-}
-.content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .column-container .column p input:focus, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .column-container .rowInput p input:focus, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .row-container .column p input:focus, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .row-container .rowInput p input:focus {
-  outline: none;
-}
-.content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .column-container .column img, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .column-container .rowInput img, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .row-container .column img, .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .row-container .rowInput img {
-  margin-left: 20px;
-  cursor: pointer;
-}
-.content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .column-container .column img[title=Save], .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .column-container .rowInput img[title=Save], .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .row-container .column img[title=Save], .content .flex-container #popup .custom-input-table-container .custom-input-table .flex-input-container .row-container .rowInput img[title=Save] {
-  display: none;
-}
-.content .flex-container #popup .controller-box {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 250px;
-  height: 70px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.content .flex-container #popup .controller-box button {
-  padding: 5px 20px;
-  border-radius: 10px;
-  font-size: 1.6rem;
-}
-.content .flex-container #popup .controller-box button#cancel {
-  border: 2px solid #6883fb;
-  background-color: #ffffff;
-  color: #6883fb;
-}
-.content .flex-container #popup .controller-box button#cancel:hover {
-  background-color: #6883fb;
-  color: #ffffff;
-}
-.content .flex-container #popup .controller-box button#popupSave {
-  border: 2px solid #6883fb;
-  background-color: #6883fb;
-  color: #ffffff;
-}
+
 .content .flex-container #popup .controller-box button#popupSave:hover {
   background-color: #4d6cf7;
   color: #ffffff;
-}
-.share-box{
-  margin-right: 25px;
-  margin-bottom: 20px;
-  height:497px;
-  margin-top:5px;
-  
 }
 .content .flex-container .share-box {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* height: 600px; */
-  width: 40%;
+  height: 600px;
+  width: 30%;
   max-width: 400px;
   min-width: 350px;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
@@ -473,10 +102,9 @@ line-height: 111.34%;
 }
 .content .flex-container .share-box h3 {
   font-size: 1.8rem;
-  margin-top: 10px;
 }
-/*   */
-.content .flex-container .share-box {
+.content .flex-container .share-box .search-box1{
+  width: 100%;
   display: flex;
   align-items: center;
   font-size: 1.6rem;
@@ -485,15 +113,6 @@ line-height: 111.34%;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
 }
-.search-box1{
-  display: flex;
-  align-items: center;
-  font-size: 1.3rem;
-  padding: 5px 15px;
-  margin-top: 10px;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 12px;
-}
 .content .flex-container .share-box .search-box1 img {
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -501,6 +120,7 @@ line-height: 111.34%;
   margin-right: 10px;
 }
 .content .flex-container .share-box .search-box1 input#search {
+  width: 100%;
   border: none;
   padding: 5px 5px;
 }
@@ -523,8 +143,6 @@ line-height: 111.34%;
   width: fit-content;
   padding: 5px 10px;
   border-radius: 15px;
-  font-size: 20px;
-  margin-left: 22px;
 }
 .content .flex-container .share-box #selectedUser-box .selectedUser p.userName {
   margin: 0;
@@ -540,38 +158,16 @@ line-height: 111.34%;
 .content .flex-container .share-box ul#usersList {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   height: 300px;
   width: 100%;
   margin-top: 20px;
-  overflow-y: scroll;
-}
-#usersList::-webkit-scrollbar{
-    width:10px; 
-}
-#usersList::-webkit-scrollar-thumb{
-  background: #888;
-}
-#usersList::-webkit-scrollbar-track {
-  background: #F3F3F3; 
-  border-radius: 20px;
-}
-
-/* Handle on hover */
-#usersList::-webkit-scrollbar-thumb:hover {
-  background:  #E3E3E3;
-  border-radius: 20px; 
-}
-#checkBox{
-width:20px;
-height:20px;
-border: 2px solid #7282FB;
-
+  overflow-y: auto;
 }
 .content .flex-container .share-box ul#usersList li {
   display: flex;
   align-items: center;
-  font-size:26px;
+  font-size: 1.8rem;
   position: relative;
 }
 .content .flex-container .share-box ul#usersList li input.checkBox {
@@ -606,82 +202,170 @@ border: 2px solid #7282FB;
   margin: 0 0 0 30px;
   cursor: pointer;
 }/*# sourceMappingURL=health_detail_form_create.css.map */
-
-@media screen and (max-width:1200px){
-  .content{
-    overflow-x: hidden;
-  }
-  .flex-container{
+/* styles for que sec  */
+#questions-container div{
+        padding: 10px 30px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    }
+    #questions-container input{
+        margin: 0;
+    color: #D6D6D6;
+    font-size: 1.6rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    margin-right: 1rem;
+    
+    }
+    #questions-container input::placeholder{
+        color: #D6D6D6; 
+    }
+    #questions-container span{
+        padding: 0rem 0.5rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    label {
+      display: block;
+      /* margin-top: 10px; */
+      font-size: 1.6rem;
+      width: 100%;
+    }
+    input[type="text"] {
+      /* width: 300px; */
+      width: 85%;
+      border: none;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    #questions-container {
+      margin-top: 20px;
+      width: 100%;
+    }
+    #save-button,
+    #cancel-button {
+      margin-top: 20px;
+    }
+    .popup-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* background-color: rgba(0, 0, 0, 0.5); */
+      z-index: 9999;
+    }
+    #popup-question::placeholder{
+        font-size: 1.6rem;
+    }
+    #popup-question{
+        border: none;
+    width: 90%;
+    font-size: 1.6rem;
+    padding: 10px 35px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    }
+    .popup {
+      background-color: #fff;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    height: 500px;
+    width:50%;
+      padding: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    .edit-icon,
+    .delete-icon {
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+    #popup-answer-type{
+      flex-wrap: wrap;
+        width: 90%;
     display: flex;
-    gap:30px;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    }
+    .radio-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    #popup-cancel-button{
+        border: 2px solid #6883fb;
+    background-color: #ffffff;
+    color: #6883fb;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    }
+    #popup-save-button{
+        border: 2px solid #6883fb;
+    background-color: #6883fb;
+    color: #ffffff;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    }
+    #add-question-button{
+        border: 2px solid #6883fb;
+    background-color: #ffffff;
+    color: #6883fb;
+    height: 60px;
+    width: 200px;
+    font-size: 1.6rem;
+    margin-top: 40px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    }
+    @media only screen 
+  /* and (min-device-width: 768px)  */
+  and (max-device-width: 1200px) {
+ .flex-container{
+  flex-direction: column !important;
+ }
+ .content .flex-container .form-container {
+    width: 100%;
+    }
+    .content .flex-container .share-box {
+      margin: 2rem 0rem;
+      align-self: center;
+    }
   }
-  .form-values-box{
-    width:82%;
+  @media only screen 
+  and (max-device-width: 768px) {
+    .content .flex-container .share-box {
+      min-width:100%;
+    }
+    .content .heading-box h1 {
+      font-size: 32px !important;
+    }
+  .popup{
+    width: 95%;
   }
-  .form-question-container{
-    width: auto;
-    margin-left: 5%;
-    margin-right: -6%;
   }
-  .form-value{
-    width:100rem;
-  }
-  #addQuestion{
-    margin-left: 7%;
-  }
-  .form-values-box .options{
-  margin-left: auto;
-  gap:20px;
-
-}
-.share-box{
-  margin-left:10%;
-  }
-}
-@media screen and (max-width:450px){
-.flex-container{
-  padding: 20px;
-  margin-left: -80px;
-  }
-.form-values-box{
-  width:280px;
-  margin-left: 15px;
-}
-  .share-box{
-margin-left: 20px;
-width: 10%;
-}
-}    
-@media screen and (max-width:400px){
-.share-box{
-  /* overflow: scroll; */
-  margin-right: 10px;
-}
-.flex-container{
-  overflow: scroll;
- 
-  
-}
-#addQuestion{
-  margin-left:-10px;
-  /* overflow: scroll; */
-}
-.form-values-box{
-  margin-left: 60px;
-  overflow: scroll;
-}
-}
-
     </style>
 
 </head>
 
-<body >
-  
-    <?php 
-     error_reporting(0);
-    include 'navbar.php' ?>
+<body>
+    <?php include 'navbar.php' ?>
 
     <div class="content">
         <div class="heading-box">
@@ -693,95 +377,59 @@ width: 10%;
             <div class="form-container">
 
                 <div class="form-title">
-                    <img src="icons/form-name.svg">
-                    <input type="text" name="formName" id="formName" placeholder="Enter form name/ client name here..">
+                    <img src="./assets/images/form-name.svg">
+                    <input type="text" name="formName" id="formName" placeholder="Enter form name">
                 </div>
+        
+    
+                
+                <div id="questions-container"></div>
+                <button type="button" id="add-question-button">Add Question</button>
 
-                <div class="form-question-container">
-
-                    <!-- Don't Add Elements here Elements are Added With JavaScript -->
-
-                </div>
-                <button type="button" id="addQuestion" data-target="Add Question" onClick="addQuestion(this)">Add
-                    Question</button>
-            </div>
-            <div id="popup" data-ans-type="text">
-                <h2>Edit Question</h2>
-
-                <input type="text" name="question" id="question" placeholder="Type your question here..">
-
-                <div class="options-container">
+              </form>
+            
+              <div class="popup-container">
+                <div class="popup">
+                  <h3>Add/Edit Question</h3>
+                  <input type="text" placeholder="Type your Question here..." id="popup-question">
+                  <div id="popup-answer-type">
                     <div class="radio-box">
                         <input type="radio" name="options" id="text" value="text" checked>
                         <label for="text">Text Field</label>
                     </div>
-
+            
                     <div class="radio-box">
                         <input type="radio" name="options" id="checkbox" value="checkbox">
                         <label for="checkbox">Checkbox</label>
                     </div>
-
+            
                     <div class="radio-box">
                         <input type="radio" name="options" id="radio" value="radio">
                         <label for="text">Radio Button</label>
                     </div>
                 </div>
-
-                <div class="custom-input-container">
-                    <div class="btn-box">
-                        <button id="addCheckbox" type="button" onclick="addQuestionOption(this)">
-                            <img src="icons/add.svg">
-                            <span>Add Checkboxes</span></button>
-                        <button id="tableCheckbox" type="button"><img src="icons/add.svg"> <span>Create a table of
-                                Checkboxes</span></button>
-
-                        <button class="close" type="button" onclick="closeOptions(this)"><img src="icons/CrossX.svg"
-                                alt="Close"></button>
-                    </div>
-                    <div class="custom-input-row">
-
-                        <!-- Don't Add Elements here Elements are Added With JavaScript -->
-
-                    </div>
+                   <div style="position: absolute;
+                   bottom: 0;
+                   right: 0;
+                   width: 250px;
+                   height: 70px;
+                   display: flex;
+                   justify-content: space-around;
+                   align-items: center;">
+                  <button type="button" id="popup-save-button">Save</button>
+                  <button type="button" id="popup-cancel-button">Cancel</button>
                 </div>
-                <div class="custom-input-table-container">
-                    <div class="btn-box">
-                        <button id="addColumn" type="button" onclick="addColumn(this)"><img src="icons/add.svg">
-                            <span>Add Column</span></button>
-                        <button id="addRow" type="button" onclick="addRow(this)"><img src="icons/add.svg">
-                            <span>Add Row</span></button>
-
-                        <button class="close-custom-input-container" type="button" onclick="rmTable(this)"><img
-                                src="icons/CrossX.svg" alt="Close"></button>
-                    </div>
-                    <div class="custom-input-table">
-
-                        <div class="flex-input-container">
-                            <div class="column-container">
-
-                                <!-- Don't Add Elements here Elements are Added With JavaScript -->
-
-                            </div>
-                            <div class="row-container">
-
-                                <!-- Don't Add Elements here Elements are Added With JavaScript -->
-
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
-                <div class="controller-box">
-                    <button id="cancel" type="button" onclick="closePopup()">Cancel</button>
-                    <button id="popupSave" onclick="savePopup(this)">Save</button>
-                </div>
+              </div>
+                
             </div>
+            
 
             <div class="share-box">
                 <h3>Assign form to the clients</h3>
 
                 <div class="search-box1">
-                    <img src="icons/search.svg">
+                    <img src="./assets/images/search1.svg">
                     <input type="search" name="search" id="search" placeholder="Search clients">
                 </div>
 
@@ -792,22 +440,22 @@ width: 10%;
 
                     <div class="selectedUser">
                         <p class="userName">Client 1</p>
-                        <img src="icons/CrossX.svg" alt="Remove" title="Remove">
+                        <img src="./assets/images/CrossX.svg" alt="Remove" title="Remove">
                     </div>
 
                     <div class="selectedUser">
                         <p class="userName">Client 2</p>
-                        <img src="icons/CrossX.svg" alt="Remove" title="Remove">
+                        <img src="./assets/images/CrossX.svg" alt="Remove" title="Remove">
                     </div>
 
                     <div class="selectedUser">
                         <p class="userName">Client 3</p>
-                        <img src="icons/CrossX.svg" alt="Remove" title="Remove">
+                        <img src="./assets/images/CrossX.svg" alt="Remove" title="Remove">
                     </div>
 
                     <div class="selectedUser">
                         <p class="userName">Client 4</p>
-                        <img src="icons/CrossX.svg" alt="Remove" title="Remove">
+                        <img src="./assets/images/CrossX.svg" alt="Remove" title="Remove">
                     </div>
 
                 </div>
@@ -839,10 +487,128 @@ width: 10%;
             </div>
         </div>
     </div>
-
-    <script src="js/health_detail_form_create.js"></script>
-
-    <?php
+    <script>
+      var editedQuestionIndex = -1;
+      
+      // Function to open the popup window for adding/editing a question
+      function openPopup(question, answerType, index) {
+        var popupContainer = document.querySelector('.popup-container');
+        popupContainer.style.display = 'block';
+        
+        document.getElementById('popup-question').value = question;
+        document.getElementById('popup-answer-type').value = answerType;
+        
+        editedQuestionIndex = index;
+      }
+      
+      // Function to close the popup window
+      function closePopup() {
+        var popupContainer = document.querySelector('.popup-container');
+        popupContainer.style.display = 'none';
+        
+        editedQuestionIndex = -1;
+      }
+      
+      // Function to add a question to the form
+      function addQuestion(question, answerType) {
+        var questionElement = document.createElement('div');
+        
+        var labelElement = document.createElement('label');
+        labelElement.textContent = question;
+        questionElement.appendChild(labelElement);
+        
+        var inputElement;
+        if (answerType === 'text') {
+          inputElement = document.createElement('input');
+          inputElement.type = 'text';
+          inputElement.placeholder = 'Answer';
+        } else if (answerType === 'radio') {
+          inputElement = document.createElement('input');
+          inputElement.type = 'radio';
+        } else if (answerType === 'checkbox') {
+          inputElement = document.createElement('input');
+          inputElement.type = 'checkbox';
+        }
+        questionElement.appendChild(inputElement);
+        var editIcon = document.createElement('span');
+        editIcon.classList.add('edit-icon');
+        editIcon.innerHTML = '&#9998;';
+        editIcon.addEventListener('click', function() {
+          openPopup(question, answerType, Array.from(questionElement.parentNode.children).indexOf(questionElement));
+        });
+        questionElement.appendChild(editIcon);
+        
+        var deleteIcon = document.createElement('span');
+        deleteIcon.classList.add('delete-icon');
+        deleteIcon.innerHTML = '&#128465;';
+        deleteIcon.addEventListener('click', function() {
+          questionElement.parentNode.removeChild(questionElement);
+        });
+        questionElement.appendChild(deleteIcon);
+        
+        var container = document.getElementById('questions-container');
+        container.appendChild(questionElement);
+      }
+      
+      // Event listener for "Add Question" button
+      var addButton = document.getElementById('add-question-button');
+      addButton.addEventListener('click', function() {
+        openPopup('', 'text', -1);
+      });
+      
+      // Event listener for popup "Save" button
+      var popupSaveButton = document.getElementById('popup-save-button');
+      popupSaveButton.addEventListener('click', function() {
+        var question = document.getElementById('popup-question').value;
+        var answerType = document.getElementById('popup-answer-type').value;
+        
+        if (editedQuestionIndex !== -1) {
+          // Editing existing question
+          var questionElement = document.getElementById('questions-container').children[editedQuestionIndex];
+          var labelElement = questionElement.querySelector('label');
+          labelElement.textContent = question;
+          questionElement.querySelector('input').type = answerType;
+        } else {
+          // Adding new question
+          addQuestion(question, answerType);
+        }
+        
+        closePopup();
+      });
+      
+      // Event listener for popup "Cancel" button
+      var popupCancelButton = document.getElementById('popup-cancel-button');
+      popupCancelButton.addEventListener('click', closePopup);
+      // Event listener for "Save" button
+      var saveButton = document.getElementById('save-button');
+      saveButton.addEventListener('click', function() {
+        var form = document.getElementById('question-form');
+        var questions = form.querySelectorAll('div');
+        var savedQuestions = [];
+        
+        questions.forEach(function(question) {
+          var label = question.querySelector('label');
+          var input = question.querySelector('input');
+          
+          var savedQuestion = {
+            question: label.textContent,
+            answerType: input.type
+          };
+          
+          savedQuestions.push(savedQuestion);
+        });
+        
+        // Do something with the saved questions
+        console.log(savedQuestions);
+      });
+  
+  
+  
+  
+  
+  
+    </script>
+    <!-- <?php
 
     $conn = new mysqli("localhost", "root", "", "infits");
 
@@ -866,7 +632,7 @@ width: 10%;
             echo "fORM nAME cREATED";
         }
     }
-    ?>
+    ?> -->
 </body>
 
 </html>
