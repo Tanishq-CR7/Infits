@@ -172,7 +172,7 @@ $res2 = mysqli_query($conn, $sql2);
         }
 
         .but {
-            position: absolute !important;
+            position: fixed !important;
         }
         .card-food{
             font-size: 23px;
@@ -217,7 +217,7 @@ $res2 = mysqli_query($conn, $sql2);
         } */
 
         .but {
-            position: absolute !important;
+            position: fixed !important;
         }
 
         .title {

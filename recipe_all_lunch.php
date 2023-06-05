@@ -183,7 +183,7 @@ $res2 = mysqli_query($conn, $sql2);
         }
 
         .but {
-            position: absolute !important;
+            position: fixed !important;
         }
     }
 
@@ -221,7 +221,7 @@ $res2 = mysqli_query($conn, $sql2);
         } */
 
         .but {
-            position: absolute !important;
+            position: fixed !important;
         }
 
         .title {
