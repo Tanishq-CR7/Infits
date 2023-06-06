@@ -158,7 +158,18 @@ include "navbar.php";
         overflow: auto;
     }
 
-
+    @media screen and (max-width: 720px) {
+        .form-container{
+            gap: 1rem !important;
+        }
+        .maincontainer{
+        padding: 2rem !important;
+        /* padding-right: 0rem !important; */
+        }
+        .maincontainer_wrapper{
+          padding-right: 0rem !important;
+        }
+    }
     @media screen and (max-width: 350px) {
         .gender {
             width: 100px !important;
@@ -201,7 +212,7 @@ include "navbar.php";
             flex-direction: column !important;
         }
         .maincontainer {
-            padding-right: 2rem;
+            /* padding-right: 2rem; */
         }
 
 
@@ -247,7 +258,7 @@ include "navbar.php";
                 <span style="display:flex;flex-direction:column">
                     Password
                     <span style="display:flex;align-items:center;justify-content:space-between "
-                        class="input_field"><input readonly type="text" id="password" placeholder="Enter Value" value="<?php if($data['socialLogin']==1){echo "Not Available";}else{echo $data['password'];} ?>"  style="border:none;color: #AEAEAE;">
+                        class="input_field"><input style="border:none;color: #AEAEAE; width:100% !important;" readonly type="text" id="password" placeholder="Enter Value" value="<?php if($data['socialLogin']==1){echo "Not Available";}else{echo $data['password'];} ?>" >
         
                         <img style="cursor: pointer;width:25px;" src="<?= $DEFAULT_PATH ?>assets/images/eye.svg" id="eyeicon"
                             alt="eye" ></span>
@@ -265,7 +276,7 @@ include "navbar.php";
                 </span>
 
 
-                <span style="display:flex;gap:1.5rem">
+                <span style="display:flex;gap:1.5rem ;flex-wrap: wrap;">
                     <span style="display:flex;flex-direction:column">
                         Gender <input readonly type="text" placeholder="Enter Value" class="gender" value="<?=$data['gender']?>">
                     </span>

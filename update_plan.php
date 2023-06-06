@@ -484,6 +484,7 @@ input[type="date"]::-webkit-datetime-edit-year-field {
 }
 
 .savebutton {
+    line-height: 20px;
     border: none;
     width: 40%;
     background-color: #6883FB;

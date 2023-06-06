@@ -222,7 +222,7 @@ include "navbar.php";
         margin-top: 8px;
         box-shadow: 0px 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.15);
         background-color: #FFFFFF;
-        Font size: 20.42px;
+        Font-size: 20.42px;
     }
 
     .modal-img .upload .upload-btn .up {
@@ -302,7 +302,7 @@ include "navbar.php";
         border-radius: 8.81041px;
         color: #BBBBBB;
         width: 390px;
-        Font size: 21.14px;
+        Font-size: 21.14px;
         display: flex;
         align-items: center;
     }
@@ -427,6 +427,13 @@ include "navbar.php";
             }
 
         }
+        .maincontainer{
+        padding: 2rem !important;
+        /* padding-right: 0rem !important; */
+        }
+        .maincontainer_wrapper{
+          padding-right: 0rem !important;
+        }
 
     }
 </style>
@@ -463,7 +470,7 @@ include "navbar.php";
                         Password
                         <span style="display:flex;align-items:center;justify-content:space-between "
                             class="input_field"><input disabled type="<?php if($data['socialLogin']==1){echo "text";}else{echo 'password';} ?>" id="password" placeholder="XXXXX"
-                            value="<?php if($data['socialLogin']==1){echo "Not Available";}else{echo $data['password'];} ?>" style="border:none;" required>
+                            value="<?php if($data['socialLogin']==1){echo "Not Available";}else{echo $data['password'];} ?>" style="border:none; width:100%;" required>
                             <?php if($data['socialLogin']==0){ ?>
                             <img style="cursor: pointer;width:25px;" src="<?= $DEFAULT_PATH ?>assets/images/eye.svg" id="eyeicon" alt="eye">
                             <?php } ?>
@@ -490,7 +497,7 @@ include "navbar.php";
                 </span>
 
 
-                <span style="display:flex;gap:1.5rem">
+                <span style="display:flex;gap:1.5rem; flex-wrap: wrap;">
                     <span style="display:flex;flex-direction:column">
                         Gender <input type="text" placeholder="M / F" name="gender" class="gender" value="<?=$data['gender']?>" required>
                     </span>

@@ -489,6 +489,11 @@ span.time {
 
 }
 @media screen and (max-width: 720px) {
+    .title-bar{
+      flex-direction: column;
+      padding: 0px 1rem;
+      gap: 1rem;
+    }
     span .client-name {
         font-size: 20px !important;
         width: 130px !important;
@@ -513,9 +518,9 @@ span.time {
 
     }
 
-    .tabsss {
+    /* .tabsss {
         margin-left: 2rem;
-    }
+    } */
 
     
 
@@ -527,7 +532,7 @@ span.time {
         width: auto;
     }
 
-    .tab-content {
+    /* .tab-content {
         margin-left: 1.5rem;
 
     }
@@ -535,7 +540,7 @@ span.time {
     .tab-content {
         margin-left: 1rem;
 
-    }
+    } */
 
     .gap-lg-6 {
         gap: 1rem !important;
@@ -548,10 +553,10 @@ span.time {
 }
 
 @media screen and (max-width:932px) {
-    .tab-content {
+    /* .tab-content {
         margin-left: 1rem;
 
-    }
+    } */
 
     .gap-lg-6 {
         gap: 1rem !important;
@@ -563,10 +568,10 @@ span.time {
 }
 
 @media screen and (max-width:1100px) {
-    .tab-content {
+    /* .tab-content {
         margin-left: 1rem;
 
-    }
+    } */
 
     .gap-lg-6 {
         gap: 0.5rem !important;

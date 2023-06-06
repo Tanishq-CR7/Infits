@@ -263,7 +263,7 @@ a:hover {
     flex-direction: row;
     justify-content: space-between;
     margin-right: 45px;
-    align-items: cente align-items: center;
+    align-items:center;
 }
 
 .container {
@@ -479,7 +479,7 @@ td.today {
                 }
 
                 .fc-prev-button {
-                    color:  !important;
+                    /* color:  !important; */
                     background-color: #EFEFEF !important;
                     padding: 1.8px !important;
                 }
@@ -609,6 +609,7 @@ td.today {
 
     .calender {
         display: flex;
+        justify-content: space-between;
     }
 
     .calender h3 {

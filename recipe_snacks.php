@@ -403,6 +403,9 @@ require('constant/config.php');
         }
     }
     @media screen and (min-width:0px) and (max-width:720px){
+        .search{
+            margin-right: 0rem !important;
+        }
         .searchbox{
             margin-left: 60px !important;
         }    

@@ -359,8 +359,11 @@ echo $output;
 
 
     @media screen and (max-width: 720px) {
+        .client-container {
+            justify-content: center;
+        }
         .clients {
-            margin-left: 2rem;
+            margin:1rem;
         }
         .search_client{
             width:auto;
@@ -481,7 +484,7 @@ echo $output;
             
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            /* justify-content: center; */
             margin-left:-10rem;
         }
         .search_client{
@@ -497,7 +500,7 @@ echo $output;
             <div class="search_client" style="justify-content:center;align-items:center">
                 <div><button id="btn3"><span class="material-symbols-outlined">search</span></button> </div>
                 <div style="margin-left:1rem;margin-right:4rem;margin-bottom:0.5rem;"> <input type="text"
-                        name="search_client" placeholder="Search Clients" class="seach_clients_text" style="width:60%">
+                        name="search_client" placeholder="Search Clients" class="seach_clients_text" style="width:100%">
                 </div>
             </div>
 

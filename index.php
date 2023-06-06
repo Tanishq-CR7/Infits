@@ -618,8 +618,8 @@ function fetchInformation($client_id)
             padding: 1rem;
             width: 280px;
             height: auto;
-            margin-left: 3rem;
-            margin-right: 2rem;
+            /* margin-left: 3rem;
+            margin-right: 2rem; */
         }
 
         .dashboard_container3 {
@@ -696,6 +696,9 @@ function fetchInformation($client_id)
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin-left: 0rem;
+        }
+        .dashboard_comtainer1 {
             margin-left: 2rem;
         }
 
@@ -705,8 +708,11 @@ function fetchInformation($client_id)
             gap: 1rem;
             margin-left: 3rem;
         }
-
-
+        .dashboard_container3 {
+            margin-left: 2rem;
+    }
+    .dashboard_container5 {
+            margin: 1rem;
     }
 
     @media screen and (max-width: 720px) {
