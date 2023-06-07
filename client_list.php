@@ -189,6 +189,7 @@ echo $output;
     }
 
     #goals {
+        background: white;
         position: fixed;
         bottom: 0;
         left: 20%;
@@ -221,6 +222,7 @@ echo $output;
     }
 
     #toast {
+        background: white;
         position: fixed;
         bottom: 0;
         left: 20%;
@@ -648,7 +650,7 @@ echo $output;
         </div>
     </div>
 
-    <div id="goals">
+    <div id="goals" >
         <h1 id="toast__h1">
             Select the clients for whom you want to set the general fitness goals!
         </h1>
