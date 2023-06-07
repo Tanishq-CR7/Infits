@@ -23,14 +23,23 @@ body {
     .content1{
         width: 700px;
     }
+    @media screen and (max-width: 720px) {
+    .help1{
+        margin-left: 2rem !important;
+        font-size:35px !important;
+    } 
+    .content1 span{
+        font-size:22px !important;
+    }
+    }
     @media only screen and (max-width: 1000px) {
         .content1{
         width: auto;
     }
-    .help1{
+    /* .help1{
         margin-left: 2rem;
        
-    }  
+    }   */
     }
 
  </style>
@@ -39,7 +48,7 @@ body {
     <p class="help1" style="font-size:40px;font-weight:400">About Us</p>
   
    <center>
-   <div class="content1"style="display:flex;flex-direction:column;gap:3rem">
+   <div class="content1"style="display:flex;flex-direction:column;gap:3rem; padding:2rem;">
    <center> <img src="<?=$DEFAULT_PATH?>assets/images/aboutus.svg" style="width:35%"></center>
     <span style="font-size: 30px;display: flex;align-items: center;text-align: justify;margin: 0 5%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tristique sem integer eros, velit vitae aliquam libero commodo. Id posuere elementum consectetur purus massa consequat. Morbi risus purus libero.</span>
     

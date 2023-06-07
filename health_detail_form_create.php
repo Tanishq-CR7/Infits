@@ -370,7 +370,7 @@
             <div class="form-container">
 
                 <div class="form-title">
-                    <img src="<?=$DEFAULT_PATH?>assets/images/Form-Name.svg">
+                    <img src="<?=$DEFAULT_PATH?>assets/images/form-name.svg">
                     <input type="text" name="formName" id="formName" placeholder="Enter form name">
                 </div>
         
@@ -401,7 +401,14 @@
                         <label for="text">Radio Button</label>
                     </div>
                 </div>
-                   <div style="position: absolute;bottom: 0;right: 0;width: 250px;height: 70px;display: flex;justify-content: space-around;align-items: center;">
+                   <div style="position: absolute;
+                   bottom: 0;
+                   right: 0;
+                   width: 250px;
+                   height: 70px;
+                   display: flex;
+                   justify-content: space-around;
+                   align-items: center;">
                   <button type="button" id="popup-save-button">Save</button>
                   <button type="button" id="popup-cancel-button">Cancel</button>
                 </div>
@@ -415,7 +422,7 @@
                 <h3>Assign form to the clients</h3>
 
                 <div class="search-box1">
-                    <img src="<?=$DEFAULT_PATH?>assets/images/Search.svg">
+                    <img src="<?=$DEFAULT_PATH?>assets/images/search1.svg">
                     <input type="search" name="search" id="search" placeholder="Search clients">
                 </div>
 
@@ -594,7 +601,14 @@
   
   
     </script>
-    <?php
+    <!-- <?php
+
+    $conn = new mysqli("localhost", "root", "", "infits");
+
+    if ($conn->connect_error) {
+        die("Connection Failed: " . $conn->connect_error);
+    }
+
     $uniqueFormID = uniqid();
 
     echo $uniqueFormID;
@@ -611,8 +625,7 @@
             echo "fORM nAME cREATED";
         }
     }
-    ?> 
-    <?php require('constant/scripts.php');?>
+    ?> -->
 </body>
 
 </html>

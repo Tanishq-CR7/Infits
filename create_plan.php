@@ -553,6 +553,8 @@ text-decoration: none;
 cursor: pointer;
 }
 .skill-box{
+font-size: 18px;
+margin-bottom: 1rem;
 box-shadow: 0px 1.7px 5px rgba(0, 0, 0, 0.25);
 height: 40px;
 /* text-align: center; */
@@ -742,7 +744,7 @@ width: 100%;
                         <div class="features_main mt-2">
                             <div class="features_left textbox-wrapper">
                                 <div class="input-group">
-                                    <div class="skills-list">
+                                    <div class="skills-list" style="width: 100%;">
                                         <!-- Skills added dynamically using JavaScript -->
                                       </div>
                                 </div>

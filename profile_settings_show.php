@@ -28,15 +28,16 @@ include "navbar.php";
         display: flex;
         flex-direction: column;
         padding-top: 2rem;
-        padding-left: 2.5rem;
+        padding-left: 5.5rem;
         padding-right: 4rem;
     }
 
     .maincontainer_wrapper {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         font-size: 25px;
-
+        padding-right: 2rem;
     }
 
     .input_field {
@@ -96,7 +97,7 @@ include "navbar.php";
 
     .footer {
         display: flex;
-        gap: 14.5%;
+        gap: 4.5%;
 
     }
 
@@ -157,7 +158,18 @@ include "navbar.php";
         overflow: auto;
     }
 
-
+    @media screen and (max-width: 720px) {
+        .form-container{
+            gap: 1rem !important;
+        }
+        .maincontainer{
+        padding: 2rem !important;
+        /* padding-right: 0rem !important; */
+        }
+        .maincontainer_wrapper{
+          padding-right: 0rem !important;
+        }
+    }
     @media screen and (max-width: 350px) {
         .gender {
             width: 100px !important;
@@ -174,6 +186,9 @@ include "navbar.php";
     }
 
     @media screen and (max-width: 1200px) {
+        .form-container{
+            flex-direction: column !important;
+        }
         .input_field {
             width: auto !important;
         }
@@ -193,9 +208,11 @@ include "navbar.php";
             gap: 0rem;
 
         }
-
+        .maincontainer_wrapper{
+            flex-direction: column !important;
+        }
         .maincontainer {
-            padding-right: 2rem;
+            /* padding-right: 2rem; */
         }
 
 
@@ -216,7 +233,8 @@ include "navbar.php";
     <div class="maincontainer">
         <h1 style="font-size:40px;fontweight:400;padding-bottom:1rem">Profile Settings</h1>
         <div class="maincontainer_wrapper">
-            <div class="leftside" style="display:flex;flex-direction:column;gap:1rem">
+        <div style="display: flex; gap: 3rem;" class="form-container">
+         <div class="leftside" style="display:flex;flex-direction:column;gap:1rem">
             <?php $sql  = "SELECT * FROM dietitian WHERE dietitianuserID = '{$_SESSION['dietitianuserID']}'";
             global $conn;
             $result = $conn->query($sql);
@@ -240,7 +258,7 @@ include "navbar.php";
                 <span style="display:flex;flex-direction:column">
                     Password
                     <span style="display:flex;align-items:center;justify-content:space-between "
-                        class="input_field"><input readonly type="text" id="password" placeholder="Enter Value" value="<?php if($data['socialLogin']==1){echo "Not Available";}else{echo $data['password'];} ?>"  style="border:none;color: #AEAEAE;">
+                        class="input_field"><input style="border:none;color: #AEAEAE; width:100% !important;" readonly type="text" id="password" placeholder="Enter Value" value="<?php if($data['socialLogin']==1){echo "Not Available";}else{echo $data['password'];} ?>" >
         
                         <img style="cursor: pointer;width:25px;" src="<?= $DEFAULT_PATH ?>assets/images/eye.svg" id="eyeicon"
                             alt="eye" ></span>
@@ -258,7 +276,7 @@ include "navbar.php";
                 </span>
 
 
-                <span style="display:flex;gap:1.5rem">
+                <span style="display:flex;gap:1.5rem ;flex-wrap: wrap;">
                     <span style="display:flex;flex-direction:column">
                         Gender <input readonly type="text" placeholder="Enter Value" class="gender" value="<?=$data['gender']?>">
                     </span>
@@ -279,34 +297,33 @@ include "navbar.php";
                 </span>
 
             </div>
-
-
+        </div>
             <div class="rightside"
-                style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2rem">
-                <div>
-                    <img src="<?= $DEFAULT_PATH ?>assets/images/Profile_dp.svg" style="border-radius:25px;" />
-                    <div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;padding-top:1rem;">
-                        <img src="<?= $DEFAULT_PATH ?>assets/images/Star.svg" style="background:none">
-                        <h3 style="font-size:25px;padding-top:0.5rem">4.8</h3>
-                    </div>
+            style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:2rem">
+            <div>
+                <img src="<?= $DEFAULT_PATH ?>assets/images/Profile_dp.svg" style="border-radius:25px;" />
+                <div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;padding-top:1rem;">
+                    <img src="<?= $DEFAULT_PATH ?>assets/images/Star.svg" style="background:none">
+                    <h3 style="font-size:25px;padding-top:0.5rem">4.8</h3>
                 </div>
-                <div style="display:flex;flex-direction:column;gap:2rem">
-                    <div style="display:flex;align-items:center;gap:1rem"><img
-                            src="<?= $DEFAULT_PATH ?>assets/images/WhatsApp.svg"><span>Whatsapp</span></div>
-                    <div style="display:flex;align-items:center;gap:1rem"><img
-                            src="<?= $DEFAULT_PATH ?>assets/images/twitter.svg"><span>Twitter</span></div>
-                    <div style="display:flex;align-items:center;gap:1rem"><img
-                            src="<?= $DEFAULT_PATH ?>assets/images/facebook.svg"><span>Facebook</span></div>
-                    <div style="display:flex;align-items:center;gap:1rem"><img
-                            src="<?= $DEFAULT_PATH ?>assets/images/LinkedIn-Circled.svg"><span>Linkdin</span></div>
-                    <div style="display:flex;align-items:center;gap:1rem"><img
-                            src="<?= $DEFAULT_PATH ?>assets/images/Instagram.svg"><span>Instagram</span></div>
-                </div>
-
-
+            </div>
+            <div style="display:flex;flex-direction:column;gap:2rem">
+                <div style="display:flex;align-items:center;gap:1rem"><img
+                        src="<?= $DEFAULT_PATH ?>assets/images/WhatsApp.svg"><span>Whatsapp</span></div>
+                <div style="display:flex;align-items:center;gap:1rem"><img
+                        src="<?= $DEFAULT_PATH ?>assets/images/twitter.svg"><span>Twitter</span></div>
+                <div style="display:flex;align-items:center;gap:1rem"><img
+                        src="<?= $DEFAULT_PATH ?>assets/images/facebook.svg"><span>Facebook</span></div>
+                <div style="display:flex;align-items:center;gap:1rem"><img
+                        src="<?= $DEFAULT_PATH ?>assets/images/LinkedIn-Circled.svg"><span>Linkedin</span></div>
+                <div style="display:flex;align-items:center;gap:1rem"><img
+                        src="<?= $DEFAULT_PATH ?>assets/images/Instagram.svg"><span>Instagram</span></div>
             </div>
 
+
         </div>
+        </div>
+       
         <div class="footer">
             <a href="profile_settings_edit.php" class="editbutton">Edit Profile Details</a>
             <a id="sharebutton" class="sharebutton" style="text-decoration: none;" href="#popup1"> Share Profile</a>

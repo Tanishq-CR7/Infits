@@ -620,7 +620,6 @@ function fetchInformation($client_id)
             padding: 1rem;
             width: 280px;
             height: auto;
-           
         }
 
         .dashboard_container3 {
@@ -708,11 +707,23 @@ function fetchInformation($client_id)
         .up {
             display: flex;
             justify-content: center;
-            align-items: center;
+            margin-left: 0rem;
+        }
+        .dashboard_comtainer1 {
+            margin-left: 2rem;
         }
         .details {
             margin: 0 !important;
         }
+        .dashboard_container3 {
+            margin-left: 2rem;
+    }
+    .dashboard_container5 {
+            margin: 1rem;
+    }
+
+    @media screen and (max-width: 720px) {
+
         .me {
             overflow: scroll;
             display: flex;

@@ -112,14 +112,19 @@ $name = explode(" ", $row['dietitianuserID']);
     }
 
     .logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 178px;
+    height: 52px;
     background-color: #ff0000;
     color: #fff;
     padding: 13px 45px;
-    font-size: 1.2rem;
+    font-size:25px;
     border: none;
     border-radius: 10px;
-    float: right;
-    position: absolute;
+    /* float: right; */
+    /* position: absolute; */
     bottom: 20px;
     right: 20px;
 }
@@ -236,10 +241,9 @@ $name = explode(" ", $row['dietitianuserID']);
         background: #F3F5F8;
         border-radius: 18px;
     }
-    a{
-        text-decoration: none !important;
-    }
-
+    a { 
+            text-decoration:none !important;
+        }
     @media screen and (max-width: 988px) {
         ul {
             margin-left: 0rem;
@@ -265,10 +269,10 @@ $name = explode(" ", $row['dietitianuserID']);
 
 
         }
-
         .mobview {
             display: flex;
             flex-direction: column;
+            margin-bottom: 10rem;
         }
     }
     body{
@@ -334,8 +338,9 @@ $name = explode(" ", $row['dietitianuserID']);
             </ul>
             
         </div>
-        
+        <div class="d-flex justify-content-end p-5">
         <a href="logout.php" class="logout">Logout</a>
+        </div>
     </div>
     
 
@@ -376,8 +381,9 @@ $name = explode(" ", $row['dietitianuserID']);
        </a>
         
         
-        
-        <a style="bottom:-70px;text-decoration:none !important" href="logout.php" class="logout">Logout</a>
+    <div class="d-flex justify-content-end p-3 d-none">
+        <a style="text-decoration:none !important; border" href="logout.php" class="logout">Logout</a>
+    </div>
     </div>
 
 

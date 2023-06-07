@@ -671,8 +671,15 @@ margin-top: 2.5rem;
 
   
   @media screen and (max-width: 720px) {
+    .mobview_wrapper1{
+        /* margin-left: 0rem; */
+        margin:1rem !important;
+    }
+    .block1 .block2{
+        gap:0rem;
+    }
     .setgoals{
-        margin-left: 1rem;
+        margin-left: 0rem;
     }
     .tooltip-text{
         width: auto;
@@ -686,9 +693,10 @@ margin-top: 2.5rem;
         display: flex;
     flex-direction: column;
     gap:0;
-        margin-left: 1rem;
+        margin-left: 0rem;
       }
       .setgoals_popup2{
+        background: white;
         left: 25px;
         top: 307.5px;
         position: absolute;
@@ -702,6 +710,7 @@ margin-top: 2.5rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        margin-right:0rem;
       }
       .mobview_pastgoals{
         display: flex;

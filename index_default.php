@@ -17,6 +17,9 @@
         font-family: 'NATS', sans-serif !important;
         margin:0 !important;
     }
+    a{
+        text-decoration: none;
+    }
 .dashboard{
     margin-top: 1rem;
     margin-left: 17rem;
@@ -93,7 +96,7 @@
 .container4_wrapper1 {
     display: flex;
     justify-content: flex-end;
-
+    width: 95%;
     padding-right: 1.5rem;
     margin:auto;
 }
@@ -125,6 +128,7 @@
     display:flex;
     justify-content:space-around;
     height:75px;
+    width: 95%;
     align-items:center;
     margin-right:4rem;
 }
@@ -153,8 +157,8 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    width:30%;
-    margin-left:11rem;
+    /* width:30%; */
+    /* margin-left:11rem; */
     margin-top:2rem;
 }
 #today{
@@ -203,6 +207,12 @@
 }
 
 @media screen and (max-width: 1200px) {
+    #upcoming {
+    width: 7rem;
+}
+#today {
+    width: 7rem;
+}
     .dashboard_container7 {
     display: flex;
     flex-direction: column;
@@ -332,10 +342,10 @@
             </div>
             <div class="symbols-container">
                 <div class="symbols col-2"><img src="<?=$DEFAULT_PATH?>assets/images/Frame.svg" style="width:1.8rem"><span>Steps</span></div>
-                <div class="symbols col-2"><img src="<?=$DEFAULT_PATH?>assets/images/Frame-1.svg" style="width:1.8rem"><span>Heart Rate</span></div>
-                <div class="symbols col-2"><img src="<?=$DEFAULT_PATH?>assets/images/Frame-2.svg" style="width:1.8rem"><span>Water</span></div>
-                <div class="symbols col-2"><img src="<?=$DEFAULT_PATH?>assets/images/Frame-3.svg" style="width:1.8rem"><span>Sleep</span></div>
-                <div class="symbols col-2"><img src="<?=$DEFAULT_PATH?>assets/images/Frame-4.svg" style="width:1.8rem"><span>Weight</span></div>
+                <div class="symbols col-2"  ><img src="<?=$DEFAULT_PATH?>assets/images/Frame-1.svg" style="width:1.8rem"><span>Heart Rate</span></div>
+                <div class="symbols col-2" ><img src="<?=$DEFAULT_PATH?>assets/images/Frame-2.svg" style="width:1.8rem"><span>Water</span></div>
+                <div class="symbols col-2" ><img src="<?=$DEFAULT_PATH?>assets/images/Frame-3.svg" style="width:1.8rem"><span>Sleep</span></div>
+                <div class="symbols col-2" ><img src="<?=$DEFAULT_PATH?>assets/images/Frame-4.svg" style="width:1.8rem"><span>Weight</span></div>
                 <div class="symbols col-2"><img src="<?=$DEFAULT_PATH?>assets/images/Frame-5.svg" style="width:1.8rem"><span>Calories</span></div>
             </div>
         </div>
@@ -350,7 +360,7 @@
         <div class="hyphen"><p>-</p></div>
         <div class="hyphen"><p>-</p></div>
     </div>
-    <div class="dashboard_container10" style="display:flex;flex-direction:row; justify-content:space-between; width:100%;">
+    <div class="dashboard_container10" style="display:flex;flex-direction:row; justify-content:space-between; width:95%;">
     <div class="dashboard_container12 left" style="display:flex;flex-direction:column; margin-top: 0.5rem; ">
         <div class="task">
             <p style="font-weight:400;font-size:25px;">My Tasks List</p>
@@ -372,7 +382,7 @@
             <p style="font-weight:400;font-size:25px; color:black;">Messages</p>
             <div ><a href="#"><button id="details" style="margin-top: 10px;">View All</button></a></div>
         </div>
-        <div class="dashboard_container8">
+        <div class="dashboard_container8 mb-5">
             <div class="dashboard_container11">
                 <div style="font-size:24px;font-weight:500;color:#434343;">No message yet!</div>
                 <a href="chat_home.php" id="today" style="margin-top: 18px;display:flex;align-items:center;justify-content:center;text-decoration:none">Start a chat</a>
