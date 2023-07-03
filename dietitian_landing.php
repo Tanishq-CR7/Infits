@@ -1,3 +1,4 @@
+<?php include "./constant/constant.php" ?>
 <!doctype html>
 <html lang="en">
 
@@ -907,7 +908,7 @@
                     </li>
                     <li class="nav-item">
                         <button class="nav-link active" aria-current="page" id="sign"
-                            onclick="window.location.href = 'register.php';">SignIn/SignUp</button>
+                            onclick="window.location.href = 'dieitian.infits.in/register.php';">SignIn/SignUp</button>
                     </li>
                 </ul>
             </div>
@@ -928,7 +929,7 @@
                         <a href="#"
                             style="width: 210px;height: 65px;justify-content: space-around;justify-content: center;align-items: center;background: #FFFFFF;border: 2px solid #817FF8;border-radius: 50px; display: flex; flex-direction: row; padding:2px; text-decoration: none;">
                             <div>
-                                <img style="margin-right: 0.5rem;" src="<?=$DEFAULT_PATH?>/images/Apple.svg" alt="apple">
+                                <img style="margin-right: 0.5rem;" src="<?=$DEFAULT_PATH?>assets/images/Apple.svg" alt="apple">
                             </div>
                             <div style="display: flex; flex-direction: column;">
                                 <div>
@@ -945,7 +946,7 @@
                         <a href="#"
                             style="width: 210px;height: 65px;justify-content: space-around;justify-content: center;align-items: center;background: #FFFFFF;border: 2px solid #817FF8;border-radius: 50px; display: flex; flex-direction: row; padding:2px;text-decoration: none;">
                             <div>
-                                <img style="margin-right: 0.5rem;" src="<?=$DEFAULT_PATH?>/images/Google Play.svg" alt="apple">
+                                <img style="margin-right: 0.5rem;" src="<?=$DEFAULT_PATH?>assets/images/Google Play.svg" alt="apple">
                             </div>
                             <div style="display: flex; flex-direction: column;">
                                 <div>
@@ -965,13 +966,13 @@
         </div>
         <div class="col-lg-6 col-md-12 col-sm-12 main-img">
             <div>
-                <img class="w-100 h-100" src="<?=$DEFAULT_PATH?>/images/diet_landing.svg" alt="">
+                <img class="w-100 h-100" src="<?=$DEFAULT_PATH?>assets/images/diet_landing.svg" alt="">
             </div>
         </div>
     </div>
     <div class="col-sm-12 container" style="margin-top: 5%;">
         <div class="hand-crafted">
-            <img class="get-vec-hand" src="<?=$DEFAULT_PATH?>/images/Vector 6.svg" style="position: absolute;
+            <img class="get-vec-hand" src="<?=$DEFAULT_PATH?>assets/images/Vector 6.svg" style="position: absolute;
             width: 435px;
             left: 52%;
             height: 350px;
@@ -981,7 +982,7 @@
             <div class="d-flex justify-content-center gap-5  hand-crafted-sec">
                 <div class="d-flex justify-content-evenly flex-wrap gap-5 align-items-center">
                     <div class="d-flex justify-content-center align-items-center flex-column">
-                        <img class="img-1" src="<?=$DEFAULT_PATH?>/images/nutritionists.svg">
+                        <img class="img-1" src="<?=$DEFAULT_PATH?>assets/images/nutritionists.svg">
                         <p style="text-align: center;
                         font-size:17px;
                         font-weight: 400;
@@ -992,7 +993,7 @@
                         ">Nutritionists</p>
                     </div>
                     <div class="d-flex justify-content-center align-items-center flex-column">
-                        <img class="img-1" src="<?=$DEFAULT_PATH?>/images/dietitians.svg">
+                        <img class="img-1" src="<?=$DEFAULT_PATH?>assets/images/dietitians.svg">
                         <p style="text-align: center;
 font-size:17px;
 margin-top: 1rem;
@@ -1006,7 +1007,7 @@ color: #000000;
                 </div>
                 <div class="d-flex justify-content-evenly flex-wrap gap-5 align-items-center">
                     <div class="d-flex justify-content-center align-items-center flex-column">
-                        <img class="img-1" src="<?=$DEFAULT_PATH?>/images/fitness-Instructors.svg">
+                        <img class="img-1" src="<?=$DEFAULT_PATH?>assets/images/fitness-Instructors.svg">
                         <p style="text-align: center;
  margin-top: 1rem;                        
 font-size:17px;
@@ -1018,7 +1019,7 @@ color: #000000;
 ">Fitness Instructors</p>
                     </div>
                     <div class="d-flex justify-content-center align-items-center flex-column">
-                        <img class="img-1" src="<?=$DEFAULT_PATH?>/images/fitness-Enthusiasts.svg">
+                        <img class="img-1" src="<?=$DEFAULT_PATH?>assets/images/fitness-Enthusiasts.svg">
                         <p style="text-align: center;
  margin-top: 1rem;
 font-size:17px;
@@ -1162,7 +1163,7 @@ color: #000000;
     </div>
     <!--------------------------------------get in touch sec-------------------------------------->
     <div class="container">
-        <img class="get-vec" src="<?=$DEFAULT_PATH?>/images/Vector 7.svg" style="position: absolute;
+        <img class="get-vec" src="<?=$DEFAULT_PATH?>assets/images/Vector 7.svg" style="position: absolute;
         width:125px;
         z-index: -1;
     ">
@@ -1170,11 +1171,11 @@ color: #000000;
         <div class="touch-2">
             <div class="t2 col-lg-6">
                 <p>Contact Us</p><br>
-                <img class="" src="<?=$DEFAULT_PATH?>/images/diet_landing-9.svg" style="width: 80%; height:80%;padding-left:40px;">
+                <img class="" src="<?=$DEFAULT_PATH?>assets/images/diet_landing-9.svg" style="width: 80%; height:80%;padding-left:40px;">
             </div>
             <div class="t3 container col-lg-6">
                 <div class="t4">
-                    <img class="" src="<?=$DEFAULT_PATH?>/images/diet_user.svg" style="top:80%;">
+                    <img class="" src="<?=$DEFAULT_PATH?>assets/images/diet_user.svg" style="top:80%;">
                     <span><input type="text" placeholder="User Name"></span>
                 </div><br>
                 <div class="t4">
